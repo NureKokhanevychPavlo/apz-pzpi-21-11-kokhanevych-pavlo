@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Hotel" parent="@style/Theme.MaterialComponents.DayNight.DarkActionBar" />
+
+    <style name="TextFieldStyle">
+        <item name="android:background">@drawable/btn_outline</item>
+        <item name="android:textSize">@dimen/size_panel_text</item>
+        <item name="android:textColor">@color/profile_title</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:paddingHorizontal">@dimen/small_padding</item>
+        <item name="android:layout_marginStart">@dimen/small_margin</item>
+    </style>
+
+    <style name="InputFieldStyle">
+        <item name="android:backgroundTint">@color/grey_auth</item>
+        <item name="android:fontFamily">@font/opensans_semibold</item>
+        <item name="android:paddingHorizontal">@dimen/small_padding</item>
+        <item name="android:textColor">@color/profile_title</item>
+        <item name="android:textSize">@dimen/size_name_text</item>
+        <item name="android:layout_marginStart">@dimen/normal_margin</item>
+        <item name="android:layout_marginTop">@dimen/small_margin</item>
+        <item name="android:layout_marginEnd">@dimen/normal_margin</item>
+    </style>
+
+    <style name="HeaderStyle">
+        <item name="android:fontFamily">@font/opensans_semibold</item>
+        <item name="android:textColor">@color/profile_title</item>
+        <item name="android:textSize">@dimen/size_title_text</item>
+    </style>
+
+    <style name="LabelLightStyle">
+        <item name="android:fontFamily">@font/opensans_semibold</item>
+        <item name="android:textColor">@color/grey_auth</item>
+        <item name="android:textSize">@dimen/size_job_text</item>
+        <item name="android:layout_marginStart">@dimen/label_margin</item>
+        <item name="android:layout_marginTop">@dimen/normal_margin</item>
+    </style>
+
+    <style name="MainButtonStyle">
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:fontFamily">@font/opensans_semibold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/size_name_text</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:paddingVertical">@dimen/normal_padding</item>
+        <item name="android:layout_marginHorizontal">@dimen/normal_margin</item>
+        <item name="android:layout_marginVertical">@dimen/normal_margin</item>
+    </style>
+
+    <style name="LabelSimpleStyle">
+        <item name="android:textSize">@dimen/size_panel_text</item>
+        <item name="android:textColor">@color/profile_title</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:layout_marginTop">@dimen/normal_margin</item>
+    </style>
+</resources>

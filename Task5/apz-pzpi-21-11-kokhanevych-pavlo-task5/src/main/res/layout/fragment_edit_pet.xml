@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:background="@color/profile_blue"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="ExtraText">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:backgroundTint="@color/color_accent"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textFindEmptyRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/HeaderStyle"
+            android:text="@string/text_edit_pet"
+            app:layout_constraintBottom_toBottomOf="@id/buttonBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/buttonBack" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_avatar"
+            android:layout_width="@dimen/margin_top_title"
+            android:layout_height="@dimen/photo_size_height"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:src="@drawable/ic_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textFindEmptyRoom" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonAddPhoto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="@dimen/small_margin"
+            android:backgroundTint="@color/color_accent"
+            android:src="@drawable/ic_add_photo"
+            app:layout_constraintBottom_toBottomOf="@id/image_avatar"
+            app:layout_constraintStart_toEndOf="@id/image_avatar"
+            app:layout_constraintTop_toTopOf="@id/image_avatar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textNamePet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:text="@string/label_pet_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_avatar" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editNamePet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/InputFieldStyle"
+            android:inputType="text"
+            android:labelFor="@id/textNamePet"
+            android:maxLength="50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textNamePet" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textAgePet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:text="@string/label_age"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editNamePet" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editAgePet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/InputFieldStyle"
+            android:inputType="number"
+            android:maxLength="2"
+            android:labelFor="@id/textAgePet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textAgePet" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textWeightPet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:text="@string/label_weight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editAgePet" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editWeightPet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/InputFieldStyle"
+            android:autofillHints="emailAddress"
+            android:inputType="numberSigned"
+            android:labelFor="@id/textWeightPet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textWeightPet" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelChooseAnimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:text="@string/label_type_animal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editWeightPet" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/editTypeAnimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:background="@color/text_job"
+            android:fontFamily="@font/opensans_semibold"
+            android:paddingStart="@dimen/small_padding"
+            android:paddingEnd="@dimen/small_padding"
+            android:textColor="@color/item_name_color"
+            android:textSize="@dimen/size_name_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelChooseAnimal"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:text="@string/label_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTypeAnimal" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/InputFieldStyle"
+            android:inputType="text"
+            android:labelFor="@id/textDescription"
+            android:maxLength="100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDescription" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonApply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/MainButtonStyle"
+            android:text="@string/text_save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editDescription"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

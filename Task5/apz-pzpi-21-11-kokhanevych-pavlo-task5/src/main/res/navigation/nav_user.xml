@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_user"
+    app:startDestination="@id/viewPagerFragment">
+
+    <fragment
+        android:id="@+id/currentRentingFragment"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.current_list.CurrentRentingFragment"
+        android:label="CurrentRentingFragment" />
+    <fragment
+        android:id="@+id/listHotelFragment"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.hotel_list.ListHotelFragment"
+        android:label="ListHotelFragment" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.history_list.HistoryFragment"
+        android:label="HistoryFragment" />
+    <fragment
+        android:id="@+id/listPetsFragment"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.pets_list.ListPetsFragment"
+        android:label="ListPetsFragment" />
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.feedback.FeedbackFragment"
+        android:label="FeedbackFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.profile.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.viewPager.ViewPagerFragment"
+        android:label="ViewPagerFragment" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_currentRentingFragment"
+            app:destination="@id/currentRentingFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_listHotelFragment"
+            app:destination="@id/listHotelFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_listPetsFragment"
+            app:destination="@id/listPetsFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_feedbackFragment"
+            app:destination="@id/feedbackFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_detailRentingFragment2"
+            app:destination="@id/detailRentingFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_editPetFragment"
+            app:destination="@id/editPetFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_listRoomFragment"
+            app:destination="@id/listRoomFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_panelFragment"
+            app:destination="@id/panelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/panelFragment"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.current_list.panel.PanelFragment"
+        android:label="PanelFragment" >
+        <action
+            android:id="@+id/action_panelFragment_to_currentRentingFragment"
+            app:destination="@id/currentRentingFragment" />
+        <action
+            android:id="@+id/action_panelFragment_to_listFeedingFragment"
+            app:destination="@id/listFeedingFragment" />
+        <argument
+            android:name="renting"
+            app:argType="com.animal.hotel.presentation.ui.models.HistoryRentingResponseUI" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFeedingFragment"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.current_list.feeding_list.ListFeedingFragment"
+        android:label="ListFeedingFragment" >
+        <action
+            android:id="@+id/action_listFeedingFragment_to_panelFragment"
+            app:destination="@id/panelFragment" />
+        <argument
+            android:name="temperature"
+            app:argType="float" />
+        <argument
+            android:name="humidity"
+            app:argType="float" />
+        <argument
+            android:name="brightness"
+            app:argType="integer" />
+        <argument
+            android:name="rentId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_listFeedingFragment_to_editFeedingFragmentDialog"
+            app:destination="@id/editFeedingFragmentDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/listRoomFragment"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.hotel_list.room_list.ListRoomFragment"
+        android:label="ListRoomFragment" >
+        <action
+            android:id="@+id/action_listRoomFragment_to_listHotelFragment"
+            app:destination="@id/listHotelFragment" />
+        <action
+            android:id="@+id/action_listRoomFragment_to_detailRoomFragment"
+            app:destination="@id/detailRoomFragment" />
+        <argument
+            android:name="hotel"
+            app:argType="com.animal.hotel.presentation.ui.models.HotelUI" />
+        <action
+            android:id="@+id/action_listRoomFragment_to_filterRoomDialog"
+            app:destination="@id/filterRoomDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPetFragment"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.pets_list.edit_pet.EditPetFragment"
+        android:label="EditPetFragment" >
+        <action
+            android:id="@+id/action_editPetFragment_to_listPetsFragment"
+            app:destination="@id/listPetsFragment" />
+        <argument
+            android:name="pet"
+            app:argType="com.animal.hotel.presentation.ui.models.PetUI" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailRoomFragment"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.hotel_list.room_list.detail_room.DetailRoomFragment"
+        android:label="DetailRoomFragment" >
+        <action
+            android:id="@+id/action_detailRoomFragment_to_listRoomFragment"
+            app:destination="@id/listRoomFragment" />
+        <action
+            android:id="@+id/action_detailRoomFragment_to_formRentingFragment"
+            app:destination="@id/formRentingFragment" />
+        <argument
+            android:name="room"
+            app:argType="com.animal.hotel.presentation.ui.models.RoomUI" />
+        <argument
+            android:name="data"
+            app:argType="com.animal.hotel.presentation.ui.models.DateRequestUI" />
+    </fragment>
+    <fragment
+        android:id="@+id/formRentingFragment"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.hotel_list.room_list.form_renting.FormRentingFragment"
+        android:label="FormRentingFragment" >
+        <action
+            android:id="@+id/action_formRentingFragment_to_detailRoomFragment"
+            app:destination="@id/detailRoomFragment" />
+        <argument
+            android:name="room"
+            app:argType="com.animal.hotel.presentation.ui.models.RoomUI" />
+        <argument
+            android:name="data"
+            app:argType="com.animal.hotel.presentation.ui.models.DateRequestUI" />
+        <argument
+            android:name="numberOfBlock"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_formRentingFragment_to_addFeedingDialog"
+            app:destination="@id/addFeedingDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailRentingFragment"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.history_list.details.DetailRentingFragment"
+        android:label="DetailRentingFragment" >
+        <argument
+            android:name="history"
+            app:argType="com.animal.hotel.presentation.ui.models.HistoryRentingResponseUI" />
+    </fragment>
+    <dialog
+        android:id="@+id/filterRoomDialog"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.hotel_list.room_list.filter_room.FilterRoomDialog"
+        android:label="FilterRoomDialog" />
+    <dialog
+        android:id="@+id/addFeedingDialog"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.hotel_list.room_list.form_renting.add_feeding.AddFeedingDialog"
+        android:label="AddFeedingDialog" />
+    <dialog
+        android:id="@+id/editFeedingFragmentDialog"
+        android:name="com.animal.hotel.presentation.ui.fragments.user.current_list.feeding_list.edit_feeding.EditFeedingFragmentDialog"
+        android:label="EditFeedingFragmentDialog" >
+        <action
+            android:id="@+id/action_editFeedingFragmentDialog_to_listFeedingFragment"
+            app:destination="@id/listFeedingFragment" />
+        <argument
+            android:name="feedingSchedule"
+            app:argType="com.animal.hotel.presentation.ui.models.ScheduleFeedResponseUI" />
+    </dialog>
+</navigation>

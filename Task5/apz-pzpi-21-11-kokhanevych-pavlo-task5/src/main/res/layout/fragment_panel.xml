@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/normal_padding"
+        android:background="@color/profile_blue"
+        tools:ignore="ExtraText">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/HeaderStyle"
+        android:text="@string/text_header_panel"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintTop_toTopOf="@id/buttonBackPanel"
+        app:layout_constraintBottom_toBottomOf="@id/buttonBackPanel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonBackPanel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:backgroundTint="@color/color_accent"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_current_temperature"
+        style="@style/LabelSimpleStyle"
+        android:layout_marginTop="@dimen/large_margin"
+        app:layout_constraintTop_toBottomOf="@id/labelHeader"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textValueTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextFieldStyle"
+        app:layout_constraintStart_toEndOf="@id/labelTemperature"
+        app:layout_constraintTop_toTopOf="@id/labelTemperature"
+        app:layout_constraintBottom_toBottomOf="@id/labelTemperature" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelWishTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_wish_temperature"
+        android:textSize="@dimen/size_panel_text"
+        android:textColor="@color/profile_title"
+        android:fontFamily="@font/opensans_regular"
+        app:layout_constraintTop_toTopOf="@id/buttonDropUpTemp"
+        app:layout_constraintBottom_toBottomOf="@id/buttonDropDownTemp"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textValueWishTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextFieldStyle"
+        app:layout_constraintStart_toEndOf="@id/labelWishTemperature"
+        app:layout_constraintTop_toTopOf="@id/labelWishTemperature"
+        app:layout_constraintBottom_toBottomOf="@id/labelWishTemperature" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/buttonDropUpTemp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_arrow_drop_up"
+        android:backgroundTint="@color/color_accent"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        app:layout_constraintStart_toEndOf="@id/textValueWishTemperature"
+        app:layout_constraintTop_toBottomOf="@id/textValueTemperature"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/buttonDropDownTemp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:backgroundTint="@color/color_accent"
+        android:src="@drawable/ic_arrow_drop_down"
+        app:layout_constraintStart_toStartOf="@id/buttonDropUpTemp"
+        app:layout_constraintTop_toBottomOf="@id/buttonDropUpTemp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_current_humidity"
+        android:textSize="@dimen/size_panel_text"
+        android:textColor="@color/profile_title"
+        android:fontFamily="@font/opensans_regular"
+        android:layout_marginTop="@dimen/normal_margin"
+        app:layout_constraintTop_toBottomOf="@id/buttonDropDownTemp"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textValueHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextFieldStyle"
+        app:layout_constraintStart_toEndOf="@id/labelHumidity"
+        app:layout_constraintTop_toTopOf="@id/labelHumidity"
+        app:layout_constraintBottom_toBottomOf="@id/labelHumidity" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelWishHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_wish_humidity"
+        android:textSize="@dimen/size_panel_text"
+        android:textColor="@color/profile_title"
+        android:fontFamily="@font/opensans_regular"
+        app:layout_constraintTop_toTopOf="@id/buttonDropUpHumidity"
+        app:layout_constraintBottom_toBottomOf="@id/buttonDropDownHumidity"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textValueWishHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextFieldStyle"
+        app:layout_constraintStart_toEndOf="@id/labelWishHumidity"
+        app:layout_constraintTop_toTopOf="@id/labelWishHumidity"
+        app:layout_constraintBottom_toBottomOf="@id/labelWishHumidity" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/buttonDropUpHumidity"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_arrow_drop_up"
+        android:backgroundTint="@color/color_accent"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        app:layout_constraintStart_toEndOf="@id/textValueWishHumidity"
+        app:layout_constraintTop_toBottomOf="@id/textValueHumidity"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/buttonDropDownHumidity"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:backgroundTint="@color/color_accent"
+        android:src="@drawable/ic_arrow_drop_down"
+        app:layout_constraintStart_toStartOf="@id/buttonDropUpHumidity"
+        app:layout_constraintTop_toBottomOf="@id/buttonDropUpHumidity"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textBrightnessValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_brightness"
+        style="@style/LabelSimpleStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonDropDownHumidity" />
+
+    <SeekBar
+        android:id="@+id/brightnessSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:progress="50"
+        android:max="100"
+        android:layout_marginStart="@dimen/small_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textBrightnessValue"
+        app:layout_constraintStart_toEndOf="@id/textBrightnessValue"
+        app:layout_constraintTop_toTopOf="@id/textBrightnessValue" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonApply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/margin_label"
+            android:fontFamily="@font/opensans_semibold"
+            android:background="@drawable/btn_outline"
+            android:text="@string/text_save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_name_text"
+            android:textAlignment="center"
+            android:paddingVertical="@dimen/small_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/brightnessSeekBar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelInfoRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/HeaderStyle"
+            android:text="@string/text_info_room"
+            app:layout_constraintTop_toBottomOf="@id/buttonApply"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/large_margin" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelFullPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_begin_renting"
+            style="@style/LabelSimpleStyle"
+            app:layout_constraintTop_toBottomOf="@id/labelInfoRoom"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textBeginRentingPanel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextFieldStyle"
+            app:layout_constraintStart_toEndOf="@id/labelFullPrice"
+            app:layout_constraintTop_toTopOf="@id/labelFullPrice"
+            app:layout_constraintBottom_toBottomOf="@id/labelFullPrice" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_end_renting"
+            style="@style/LabelSimpleStyle"
+            app:layout_constraintTop_toBottomOf="@id/textBeginRentingPanel"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextFieldStyle"
+            app:layout_constraintStart_toEndOf="@id/labelArea"
+            app:layout_constraintTop_toTopOf="@id/labelArea"
+            app:layout_constraintBottom_toBottomOf="@id/labelArea" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelPriceHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_pet_name"
+            style="@style/LabelSimpleStyle"
+            app:layout_constraintTop_toBottomOf="@id/textEndDate"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRentingPet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextFieldStyle"
+            app:layout_constraintStart_toEndOf="@id/labelPriceHour"
+            app:layout_constraintTop_toTopOf="@id/labelPriceHour"
+            app:layout_constraintBottom_toBottomOf="@id/labelPriceHour" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelNumberRoomPanel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_number_room"
+            style="@style/LabelSimpleStyle"
+            app:layout_constraintTop_toBottomOf="@id/textRentingPet"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textNumberRoomPanel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextFieldStyle"
+            app:layout_constraintStart_toEndOf="@id/labelNumberRoomPanel"
+            app:layout_constraintTop_toTopOf="@id/labelNumberRoomPanel"
+            app:layout_constraintBottom_toBottomOf="@id/labelNumberRoomPanel" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelBlocks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:theme="@style/HeaderStyle"
+        android:text="@string/label_blocks_of_food"
+        app:layout_constraintTop_toBottomOf="@id/labelNumberRoomPanel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/large_margin" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerBlocksFood"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginTop="@dimen/label_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelBlocks"
+        app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonVideo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/MainButtonStyle"
+            android:text="@string/text_video"
+            android:paddingVertical="@dimen/small_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerBlocksFood" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonFeedingPanel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/MainButtonStyle"
+            android:text="@string/text_feeding"
+            android:paddingVertical="@dimen/small_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonVideo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="ExtraText">
+
+        <View
+            android:id="@+id/viewBar"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:background="@color/profile_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:backgroundTint="@color/color_accent"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintBottom_toBottomOf="@id/viewBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textFindEmptyRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/HeaderStyle"
+            android:text="@string/label_filter_room"
+            android:layout_marginStart="@dimen/small_margin"
+            app:layout_constraintBottom_toBottomOf="@id/buttonBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/buttonBack" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textWishBeginDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:text="@string/label_begin_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewBar" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editRentingBeginDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/InputFieldStyle"
+            android:inputType="text"
+            android:labelFor="@id/textWishBeginDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textWishBeginDate" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textWishEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:text="@string/label_end_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editRentingBeginDate" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editRentingEndDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/InputFieldStyle"
+            android:inputType="text"
+            android:labelFor="@id/textWishEndDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textWishEndDate" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonApply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/MainButtonStyle"
+            android:layout_marginVertical="@dimen/margin_label"
+            android:text="@string/text_apply"
+            android:layout_marginBottom="@dimen/small_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editRentingEndDate"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>

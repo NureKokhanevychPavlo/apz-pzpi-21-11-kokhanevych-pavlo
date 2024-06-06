@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/normal_padding"
+        android:background="@color/profile_blue"
+        tools:ignore="ExtraText">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:backgroundTint="@color/color_accent"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/HeaderStyle"
+            android:text="@string/label_fill_fields"
+            app:layout_constraintTop_toTopOf="@id/buttonBack"
+            app:layout_constraintBottom_toBottomOf="@id/buttonBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelChooseAnimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:layout_marginStart="@dimen/label_margin"
+            android:layout_marginTop="@dimen/large_margin"
+            android:text="@string/label_choose_animal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonBack" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/editTypeAnimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:background="@color/text_job"
+            android:fontFamily="@font/opensans_semibold"
+            android:paddingStart="@dimen/small_padding"
+            android:paddingEnd="@dimen/small_padding"
+            android:textColor="@color/item_name_color"
+            android:textSize="@dimen/size_name_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelChooseAnimal"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/HeaderStyle"
+            android:text="@string/label_feed_schedule"
+            android:layout_marginTop="@dimen/large_margin"
+            app:layout_constraintTop_toBottomOf="@id/editTypeAnimal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonAddFeedingFill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_add_feeding"
+            android:textColor="@color/profile_title"
+            android:textSize="@dimen/size_job_text"
+            android:fontFamily="@font/opensans_semibold"
+            android:backgroundTint="@color/color_accent"
+            android:background="@color/color_accent"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/normal_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelSchedule" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonAutogenerate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_autogenerate"
+            android:textColor="@color/profile_title"
+            android:textSize="@dimen/size_job_text"
+            android:fontFamily="@font/opensans_semibold"
+            android:backgroundTint="@color/color_accent"
+            android:background="@color/color_accent"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/buttonAddFeedingFill" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_feeding_fill"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintTop_toBottomOf="@id/buttonAddFeedingFill"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelFullPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_full_price"
+            style="@style/LabelSimpleStyle"
+            app:layout_constraintTop_toBottomOf="@id/recycler_feeding_fill"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textFullPriceFill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextFieldStyle"
+            app:layout_constraintStart_toEndOf="@id/labelFullPrice"
+            app:layout_constraintTop_toTopOf="@id/labelFullPrice"
+            app:layout_constraintBottom_toBottomOf="@id/labelFullPrice" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonPay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/MainButtonStyle"
+            android:layout_marginVertical="@dimen/margin_label"
+            android:text="@string/text_pay"
+            android:paddingVertical="@dimen/small_padding"
+            app:layout_constraintTop_toBottomOf="@id/textFullPriceFill"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

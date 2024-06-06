@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginStart="@dimen/normal_margin"
+    android:layout_marginTop="@dimen/small_margin"
+    android:layout_marginEnd="@dimen/normal_margin"
+    android:background="@drawable/item_border"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/small_padding"
+    android:paddingVertical="@dimen/small_padding">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/avatarPet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        app:srcCompat="@drawable/ic_avatar"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/margin_label">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans_semibold"
+            android:lines="1"
+            android:layout_marginTop="@dimen/small_margin"
+            android:textColor="@color/item_name_color"
+            tools:text="Den"
+            android:textSize="@dimen/size_name_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTypePet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans_regular"
+            android:lines="1"
+            tools:text="Dog"
+            android:textColor="@color/item_job_color"
+            android:textSize="@dimen/size_bottom_title" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/profile_blue"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageAvatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelHeader"
+            android:layout_marginTop="@dimen/normal_margin" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/HeaderStyle"
+            android:text="@string/label_setting"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/normal_margin" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:text="@string/label_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageAvatar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/editEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:paddingVertical="@dimen/small_padding"
+            android:background="@drawable/btn_outline"
+            android:fontFamily="@font/opensans_semibold"
+            android:paddingHorizontal="@dimen/small_padding"
+            android:textColor="@color/profile_title"
+            android:textSize="@dimen/size_name_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelEmail" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:text="@string/label_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editEmail" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/editFullName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:paddingVertical="@dimen/small_padding"
+            android:background="@drawable/btn_outline"
+            android:fontFamily="@font/opensans_semibold"
+            android:paddingHorizontal="@dimen/small_padding"
+            android:textColor="@color/profile_title"
+            android:textSize="@dimen/size_name_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelFullName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:text="@string/label_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editFullName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/editPhoneNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:paddingVertical="@dimen/small_padding"
+            android:background="@drawable/btn_outline"
+            android:fontFamily="@font/opensans_semibold"
+            android:paddingHorizontal="@dimen/small_padding"
+            android:textColor="@color/profile_title"
+            android:textSize="@dimen/size_name_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelPhoneNumber" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelBirthDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:text="@string/label_birth"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editPhoneNumber" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/editBirthDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:paddingVertical="@dimen/small_padding"
+            android:background="@drawable/btn_outline"
+            android:fontFamily="@font/opensans_semibold"
+            android:paddingHorizontal="@dimen/small_padding"
+            android:textColor="@color/profile_title"
+            android:textSize="@dimen/size_name_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelBirthDate" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/MainButtonStyle"
+            android:text="@string/text_delete"
+            android:paddingVertical="@dimen/small_padding"
+            app:layout_constraintBottom_toTopOf="@id/buttonEditProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonEditProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/MainButtonStyle"
+            android:text="@string/button_edit_profile"
+            android:paddingVertical="@dimen/small_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

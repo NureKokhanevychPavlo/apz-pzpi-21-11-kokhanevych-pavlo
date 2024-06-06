@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/profile_blue"
+    android:paddingHorizontal="@dimen/normal_padding">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/HeaderStyle"
+        android:text="@string/text_text_us"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/normal_margin" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/textMessage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_outline"
+        android:fontFamily="@font/opensans_regular"
+        android:textColor="@color/profile_title"
+        android:textSize="@dimen/size_panel_text"
+        android:hint="@string/hint_text"
+        android:textColorHint="@color/profile_title"
+        android:layout_marginTop="@dimen/large_margin"
+        android:layout_marginBottom="@dimen/normal_margin"
+        android:padding="@dimen/small_padding"
+        app:layout_constraintTop_toBottomOf="@id/labelHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonSend"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/MainButtonStyle"
+        android:text="@string/text_send"
+        android:paddingVertical="@dimen/small_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

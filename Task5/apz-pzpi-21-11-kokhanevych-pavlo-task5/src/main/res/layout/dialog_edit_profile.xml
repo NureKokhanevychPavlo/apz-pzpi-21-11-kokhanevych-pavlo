@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="ExtraText">
+
+        <View
+            android:id="@+id/viewBar"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/large_view_height"
+            android:background="@color/profile_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:backgroundTint="@color/color_accent"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textFindEmptyRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/HeaderStyle"
+            android:text="@string/label_edit_profile"
+            app:layout_constraintBottom_toBottomOf="@id/buttonBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/buttonBack" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_avatar"
+            android:layout_width="@dimen/margin_top_title"
+            android:layout_height="@dimen/photo_size_height"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:src="@drawable/ic_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textFindEmptyRoom" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonAddPhoto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="@dimen/small_margin"
+            android:backgroundTint="@color/color_accent"
+            android:src="@drawable/ic_add_photo"
+            app:layout_constraintBottom_toBottomOf="@id/image_avatar"
+            app:layout_constraintStart_toEndOf="@id/image_avatar"
+            app:layout_constraintTop_toTopOf="@id/image_avatar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textWishBeginDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:text="@string/label_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewBar" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/InputFieldStyle"
+            android:inputType="text"
+            android:labelFor="@id/textWishBeginDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textWishBeginDate" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textWishEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:text="@string/label_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editEmail" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editFullName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/InputFieldStyle"
+            android:inputType="text"
+            android:labelFor="@id/textWishEndDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textWishEndDate" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelChooseAnimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:text="@string/label_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editFullName" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/InputFieldStyle"
+            android:inputType="phone"
+            android:labelFor="@id/labelChooseAnimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelChooseAnimal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewBirth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LabelLightStyle"
+            android:text="@string/label_birth"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editPhone" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextBirth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/InputFieldStyle"
+            android:inputType="date"
+            android:labelFor="@id/textViewBirth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewBirth" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonApply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/MainButtonStyle"
+            android:text="@string/text_save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextBirth"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

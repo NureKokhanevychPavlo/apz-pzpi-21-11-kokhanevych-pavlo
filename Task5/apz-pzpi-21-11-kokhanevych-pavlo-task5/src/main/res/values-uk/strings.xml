@@ -1,0 +1,135 @@
+<resources>
+    <string name="app_name">Hotel</string>
+
+    <!-- authentication screens -->
+    <string name="label_welcome">Давай знайомитись</string>
+    <string name="label_bottom_title">Заповнюйте профіль і переходьте до програми!</string>
+    <string name="label_email">Електронна пошта</string>
+    <string name="label_password">Пароль</string>
+    <string name="remember_me">Запам\'ятати мене</string>
+    <string name="text_register">зареєструватися</string>
+    <string name="text_terms">Натиснувши «Зареєструватися», ви погоджуєтеся з нашими Умовами</string>
+    <string name="text_question">Вже маєте акаунт?</string>
+    <string name="text_signIn">Увійти</string>
+
+
+    <!-- register screens -->
+    <string name="label_name">Повне ім\'я</string>
+    <string name="label_fill">Вкажи необхідну інформацію</string>
+    <string name="label_again_password">Знову пароль</string>
+    <string name="label_phone">Номер телефону</string>
+    <string name="label_birth">Дата народження</string>
+    <string name="text_cancel">Вийти</string>
+
+    <!-- navigation menu -->
+    <string name="profile">Профіль</string>
+    <string name="sign_out">Вийти</string>
+
+    <!-- current renting screen -->
+    <string name="text_current_renting">Діюча оренда</string>
+    <string name="label_pet_name">Кличка:</string>
+    <string name="label_address">Адрес:</string>
+    <string name="text_end_renting">Кінець оренди:</string>
+    <string name="text_begin_renting">Початок оренди:</string>
+
+    <!-- profile screen -->
+    <string name="label_setting">Налаштування</string>
+    <string name="button_edit_profile">Редагувати</string>
+    <string name="text_delete">Видалити</string>
+
+    <!-- edit profile screen -->
+    <string name="label_edit_profile">Редагувати</string>
+    <string name="text_save">Зберегти</string>
+
+    <!-- confirm dialog -->
+    <string name="text_confirm">Підтвердити</string>
+    <string name="text_sure">Ви впевнені?</string>
+
+    <!-- panel of controlling screen -->
+    <string name="text_header_panel">Панель керування</string>
+    <string name="text_current_temperature">Поточна температура:</string>
+    <string name="text_brightness">Яскравість світла:</string>
+    <string name="text_wish_temperature">Бажана температура:</string>
+    <string name="text_current_humidity">Поточна вологість:</string>
+    <string name="text_wish_humidity">Бажана вологість:</string>
+    <string name="label_blocks_of_food">Блоки із їжею</string>
+    <string name="text_food_type">Тип їжі:</string>
+    <string name="label_portion">Порція:</string>
+    <string name="text_level_filling">Рівень заповненості:</string>
+    <string name="text_info_room">Інформація про кімнату</string>
+    <string name="text_video">Відео</string>
+    <string name="text_feeding">Харчування</string>
+
+    <!-- food schedule screen -->
+    <string name="text_schedule">Графік харчування</string>
+    <string name="text_add_feeding">Додати</string>
+    <string name="label_date_time">Дата та час:</string>
+    <string name="label_food">Їжа</string>
+
+    <!-- history renting screen -->
+    <string name="text_history_renting">Історія орендувань</string>
+    <string name="text_renting">Оренда</string>
+    <string name="text_number_room">Номер кімнати:</string>
+    <string name="text_name_hotel">Назва готелю:</string>
+    <string name="text_total_price">Повна ціна:</string>
+    <string name="text_text_us">Напишіть нам</string>
+    <string name="hint_text">Текст…</string>
+    <string name="text_send">Відправити</string>
+
+    <!-- pet screen -->
+    <string name="text_my_pets">Мої тварини</string>
+    <string name="text_add_pet">Додати тварину</string>
+    <string name="label_age">Вік:</string>
+    <string name="label_weight">Вага:</string>
+    <string name="label_type_animal">Тип тварини:</string>
+    <string name="label_description">Опис:</string>
+    <string name="text_edit_pet">Редагувати</string>
+
+    <!-- hotel screen -->
+    <string name="label_hotel_name">Назва готелю:</string>
+    <string name="label_search">Назва…</string>
+
+    <!-- Rooms screen -->
+    <string name="text_rooms">Кімнати</string>
+    <string name="label_filter_room">Фільтрація</string>
+    <string name="label_begin_date">Початок оренди:</string>
+    <string name="label_end_date">Кінець оренди:</string>
+    <string name="text_apply">Застосувати</string>
+    <string name="label_room">Кімната</string>
+    <string name="label_amount_blocks">Кількість блоків:</string>
+    <string name="label_number_room">Номер кімнати:</string>
+    <string name="label_area">Площа:</string>
+    <string name="label_price_hour">Ціна за годину:</string>
+    <string name="text_rent">Орендувати</string>
+
+    <!-- rent screen -->
+    <string name="label_fill_fields">Заповніть поля</string>
+    <string name="label_choose_animal">Оберіть тварину:</string>
+    <string name="label_feed_schedule">Графік харчування</string>
+    <string name="label_autogenerate">Згенерувати</string>
+    <string name="label_full_price">Повна ціна:</string>
+    <string name="text_pay">Оплатити</string>
+
+    <!-- Errors -->
+    <string name="error_email">Невірний формат</string>
+    <string name="error_password">Поганий пароль.Використовуйте нижній та верхній регістр, цифри, знак</string>
+    <string name="error_password_same">Різні  паролі</string>
+    <string name="error_phone_number">Неправильний формат номера</string>
+    <string name="error_old_enough">Недостатній вік</string>
+    <string name="error_date_format">Неправильний формат</string>
+    <string name="error_connect">Помилка мережі</string>
+    <string name="error_unknown">Щось пішло не так</string>
+    <string name="error_server">Проблема із сервером</string>
+
+    <!-- Naming screens -->
+    <string name="screen_current">Поточна оренда</string>
+    <string name="screen_list_pets">Тварини</string>
+    <string name="screen_list_hotels">Готелі</string>
+    <string name="screen_history_renting">Історія оренд</string>
+    <string name="screen_feedback">Зв\'язок</string>
+
+    <!-- Toast message -->
+    <string name="message_successfully">Successfully</string>
+    <string name="label_hotel">Готель</string>
+    <string name="text_close_bar">Закрити вікно</string>
+</resources>

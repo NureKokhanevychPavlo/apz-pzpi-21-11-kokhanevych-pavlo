@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/profile_blue">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/HeaderStyle"
+        android:layout_marginTop="@dimen/margin_top_title"
+        android:text="@string/label_welcome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelBottomTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:fontFamily="@font/opensans_regular"
+        android:text="@string/label_bottom_title"
+        android:textColor="@color/profile_title"
+        android:textSize="@dimen/size_bottom_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LabelLightStyle"
+        android:text="@string/label_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelBottomTitle" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/InputFieldStyle"
+        android:autofillHints="emailAddress"
+        android:inputType="textEmailAddress"
+        android:labelFor="@id/labelEmail"
+        android:maxLength="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelEmail" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LabelLightStyle"
+        android:text="@string/label_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editEmail" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/InputFieldStyle"
+        android:autofillHints="emailAddress"
+        android:inputType="textPassword"
+        android:labelFor="@id/labelPassword"
+        android:maxLength="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelPassword" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkboxRemember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:button="@drawable/bg_checkbox"
+        android:checked="false"
+        android:fontFamily="@font/opensans_semibold"
+        android:paddingStart="@dimen/small_padding"
+        android:paddingEnd="@dimen/small_padding"
+        android:text="@string/remember_me"
+        android:textColor="@color/text_job"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editPassword" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signInButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/MainButtonStyle"
+        android:text="@string/text_signIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkboxRemember"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        app:strokeWidth="@dimen/stroke_width" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelTerms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginEnd="@dimen/large_margin"
+        android:fontFamily="@font/opensans_regular"
+        android:text="@string/text_terms"
+        android:textAlignment="center"
+        android:textColor="@color/profile_title"
+        android:textSize="@dimen/size_bottom_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signInButton" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:fontFamily="@font/opensans_semibold"
+        android:text="@string/text_question"
+        android:textColor="@color/text_job"
+        android:textSize="@dimen/size_job_text"
+        app:layout_constraintEnd_toStartOf="@id/buttonRegisterUser"
+        app:layout_constraintBottom_toBottomOf="@id/buttonRegisterUser"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelTerms" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonRegisterUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:fontFamily="@font/opensans_semibold"
+        android:text="@string/text_register"
+        android:background="@drawable/btn_outline"
+        android:textColor="@color/light"
+        android:textSize="@dimen/size_job_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/labelQuestion"
+        app:layout_constraintTop_toBottomOf="@id/labelTerms" />
+</androidx.constraintlayout.widget.ConstraintLayout>

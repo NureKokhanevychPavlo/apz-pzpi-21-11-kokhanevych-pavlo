@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/normal_margin"
+    android:layout_marginTop="@dimen/small_margin"
+    android:layout_marginEnd="@dimen/normal_margin"
+    android:background="@drawable/item_border"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/small_padding"
+    android:paddingVertical="@dimen/small_padding">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/small_margin">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelRoomItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans_semibold"
+            android:lines="1"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/label_hotel_name"
+            android:textColor="@color/item_name_color"
+            android:textSize="@dimen/size_name_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/labelHourPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans_semibold"
+            android:lines="1"
+            android:text="@string/label_address"
+            android:textColor="@color/item_name_color"
+            android:textSize="@dimen/size_name_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/micro_margin">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textNameHotelItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans_semibold"
+            android:lines="1"
+            android:layout_marginTop="@dimen/small_margin"
+            android:textColor="@color/item_name_color"
+            android:textSize="@dimen/size_name_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textAddressHotelItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans_semibold"
+            android:lines="1"
+            android:textColor="@color/item_name_color"
+            android:textSize="@dimen/size_name_text" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/profile_blue"
+    android:paddingHorizontal="@dimen/normal_padding"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:backgroundTint="@color/color_accent"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/HeaderStyle"
+        android:text="@string/text_renting"
+        app:layout_constraintTop_toTopOf="@id/buttonBack"
+        app:layout_constraintBottom_toBottomOf="@id/buttonBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelFullPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_begin_renting"
+        style="@style/LabelSimpleStyle"
+        android:layout_marginTop="@dimen/large_margin"
+        app:layout_constraintTop_toBottomOf="@id/labelHeader"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textBeginRentingDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextFieldStyle"
+        app:layout_constraintStart_toEndOf="@id/labelFullPrice"
+        app:layout_constraintTop_toTopOf="@id/labelFullPrice"
+        app:layout_constraintBottom_toBottomOf="@id/labelFullPrice" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_end_renting"
+        style="@style/LabelSimpleStyle"
+        app:layout_constraintTop_toBottomOf="@id/textBeginRentingDate"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextFieldStyle"
+        app:layout_constraintStart_toEndOf="@id/labelArea"
+        app:layout_constraintTop_toTopOf="@id/labelArea"
+        app:layout_constraintBottom_toBottomOf="@id/labelArea" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelPriceHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_pet_name"
+        style="@style/LabelSimpleStyle"
+        app:layout_constraintTop_toBottomOf="@id/textEndDate"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textRentingPet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextFieldStyle"
+        app:layout_constraintStart_toEndOf="@id/labelPriceHour"
+        app:layout_constraintTop_toTopOf="@id/labelPriceHour"
+        app:layout_constraintBottom_toBottomOf="@id/labelPriceHour" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelNumberRoom"
+        style="@style/LabelSimpleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_number_room"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textRentingPet"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textNumberRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextFieldStyle"
+        app:layout_constraintStart_toEndOf="@id/labelNumberRoom"
+        app:layout_constraintTop_toTopOf="@id/labelNumberRoom"
+        app:layout_constraintBottom_toBottomOf="@id/labelNumberRoom" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelRoomItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_name_hotel"
+        style="@style/LabelSimpleStyle"
+        app:layout_constraintTop_toBottomOf="@id/textNumberRoom"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textNameHotelRenting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextFieldStyle"
+        app:layout_constraintStart_toEndOf="@id/labelRoomItem"
+        app:layout_constraintTop_toTopOf="@id/labelRoomItem"
+        app:layout_constraintBottom_toBottomOf="@id/labelRoomItem" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelTotalPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_total_price"
+        style="@style/LabelSimpleStyle"
+        app:layout_constraintTop_toBottomOf="@id/textNameHotelRenting"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTotalPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextFieldStyle"
+        app:layout_constraintStart_toEndOf="@id/labelTotalPayment"
+        app:layout_constraintTop_toTopOf="@id/labelTotalPayment"
+        app:layout_constraintBottom_toBottomOf="@id/labelTotalPayment" />
+</androidx.constraintlayout.widget.ConstraintLayout>
